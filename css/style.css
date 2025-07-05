@@ -1,0 +1,181 @@
+:root {
+  --color-bg-main: #3B4664;
+  --color-display: #181F32;
+  --color-button: #EAE3DC;
+  --color-button-oscuro: #d1cbc6;
+  --color-button-text: #444B5A;
+  --color-accent: #D03F2F;
+  --color-accent-oscuro: #be3a2b;
+  --color-special: #647198;
+  --color-special-oscuro: #5a6587;
+  --color-fondo-teclado: #242D44;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: var(--color-bg-main);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.titulo{
+    margin: 40px auto 0px;
+    width: 35%;
+    color: #FFF;
+    text-transform: uppercase;
+}
+.contenedor-display{
+    margin: 10px auto 0px;
+    width: 35%;
+    height: 100px;
+    background: var(--color-display);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+.contenedor-display input{
+    width: 100%;
+    height: 100%;
+    font-size: 36px;
+    text-align: right;
+    border: none;
+    background: transparent;
+    color: white;
+    font-weight: bold;
+    outline: none;
+}
+.contenedor-btn{
+    width: 33%;
+    height: 500px;
+    margin: 5px auto 0px;
+    background: var(--color-fondo-teclado);
+    border-radius: 5px;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, auto);
+    grid-gap: 15px;
+    grid-template-areas: "siete   ocho   nueve  del"
+                         "cuatro  cinco  seis   suma"
+                         "uno     dos    tes    resta"
+                         "punto   cero   divi   multi"
+                         "reset   reset  igual  igual";
+}
+.btn{
+    background: var(--color-button);
+    color: var(--color-button-text);
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.2s;
+}
+.btn:hover{
+    background: var(--color-button-oscuro);
+}
+.uno{
+    grid-row: uno;
+    grid-column: uno;
+}
+.dos{
+    grid-row: dos;
+    grid-column: dos;
+}
+.tres{
+    grid-row: tes;
+    grid-column: tes;
+}
+.cuatro{
+    grid-row: cuatro;
+    grid-column: cuatro;
+}
+.cinco{
+    grid-row: cinco;
+    grid-column: cinco;
+}
+.seis{
+    grid-row: seis;
+    grid-column: seis;
+}
+.siete{
+    grid-row: siete;
+    grid-column: siete;
+}
+.ocho{
+    grid-row: ocho;
+    grid-column: ocho;
+}
+.nueve{
+    grid-row: nueve;
+    grid-column: nueve;
+}
+.cero{
+    grid-row: cero;
+    grid-column: cero;
+}
+.suma{
+    grid-row: suma;
+    grid-column: suma;
+}
+.resta{
+    grid-row: resta;
+    grid-column: resta;
+}
+.multiplicacion{
+    grid-row: multi;
+    grid-column: multi;
+}
+.division{
+    grid-row: divi;
+    grid-column: divi;
+}
+.punto{
+    grid-row: punto;
+    grid-column: punto;
+}
+.reset{
+    grid-row: reset;
+    grid-column: reset;
+    background: var(--color-special);
+    color: #FFF;
+    transition: all 0.2s;
+}
+.reset:hover{
+    background: var(--color-special-oscuro);
+}
+.igual{
+    grid-row: igual;
+    grid-column: igual;
+    color: #FFF;
+    background: var(--color-accent);
+    transition: all 0.2s;
+}
+.igual:hover{
+    background: var(--color-accent-oscuro);
+}
+.del{
+    grid-row: del;
+    grid-column: del;
+    background: var(--color-special);
+    transition: all 0.2s;
+    color: #FFF;
+}
+.del:hover{
+    background: var(--color-special-oscuro);
+}
+@media screen and (max-width: 400px){
+    .contenedor-btn{
+        width: 88%;
+    }
+    .contenedor-display{
+        width: 95%;
+    }
+    .titulo{
+        width: 95%;
+        text-align: center;
+    }
+}
